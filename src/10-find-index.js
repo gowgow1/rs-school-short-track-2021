@@ -15,10 +15,10 @@ function findIndex(array, value) {
   let min = 0;
   let max = array.length - 1;
   while (min <= max) {
-    const mid = Math.floor((max - min) / 2);
+    const mid = Math.floor((max + min) / 2);
     if (array[mid] === value) return mid;
-    if (array[mid] > value) max = mid - 1;
-    if (array[mid] < value) min = mid + 1;
+    if (array[mid] > value) min = mid - 1;
+    if (array[mid] < value) max = mid + 1;
   } return -123;
 }
 
