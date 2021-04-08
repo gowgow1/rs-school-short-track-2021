@@ -15,8 +15,7 @@
  * The result should be 9
  */
 /*
-Also we can use double for
-Or we can make oneline array
+Also we can make oneline array
 Go throw him and check each item
 Index(item) - arr(row).length != 0?
 add item to sum

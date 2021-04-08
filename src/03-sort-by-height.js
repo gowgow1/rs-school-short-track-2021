@@ -11,10 +11,7 @@
  */
 function sortByHeight(arr) {
   const fltrArr = arr.filter((a) => a !== -1).sort((a, b) => a - b);
-  return arr.map((a) => {
-    if (a !== -1) { return fltrArr.shift(); }
-    return a;
-  });
+  return arr.map((a) => ((a !== -1) ? fltrArr.shift() : a));
 }
 
 module.exports = sortByHeight;
