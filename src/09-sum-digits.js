@@ -11,7 +11,7 @@
  *
  */
 function getSumOfDigits(n) {
-  return n.toString().length > 1 ? getSumOfDigits(n.toString().split('').reduce((a, b) => +a + +b, 0)) : +n;
+  return n.toString().length > 1 ? getSumOfDigits(n.toString().split('').reduce((a, b) => +a + +b, 0)) : n;
 }
 
 module.exports = getSumOfDigits;
