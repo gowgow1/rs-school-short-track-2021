@@ -11,10 +11,7 @@
  */
 function deleteDigit(n) {
   const rslt = n.toString().split('').map(() => n.toString().split(''));
-  return Math.max(...rslt.map((a, i) => {
-    a.splice(i, 1);
-    return +a.join('');
-  }));
+  return Math.max(...rslt.map((a, i) => { a.splice(i, 1); return +a.join(''); }));
 }
 
 module.exports = deleteDigit;
