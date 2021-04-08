@@ -14,8 +14,19 @@
  *
  * The result should be 9
  */
-function getMatrixElementsSum(/* matrix */) {
-  throw new Error('Not implemented');
+/*
+Also we can use double for
+Or we can make oneline array
+Go throw him and check each item
+Index(item) - arr(row).length != 0?
+add item to sum
+*/
+function getMatrixElementsSum(matrix) {
+  const result = matrix.map((row, rowind, arr) => row.reduce((acum, curr, i) => {
+    if (rowind > 0) { return arr[rowind - 1][i] === 0 ? acum : acum + curr; }
+    return acum + curr;
+  }, 0));
+  return result.reduce((acum, curr) => acum + curr);
 }
 
 module.exports = getMatrixElementsSum;
