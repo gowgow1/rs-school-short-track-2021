@@ -17,8 +17,8 @@ function findIndex(array, value) {
   while (min <= max) {
     const mid = Math.floor((max + min) / 2);
     if (array[mid] === value) return mid;
-    if (array[mid] > value) min = mid - 1;
-    if (array[mid] < value) max = mid + 1;
+    if (array[mid] > value) max = mid;
+    if (array[mid] < value) min = mid;
   } return -123;
 }
 
