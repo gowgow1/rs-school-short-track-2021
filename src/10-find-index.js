@@ -14,12 +14,13 @@
 function findIndex(array, value) {
   let min = 0;
   let max = array.length - 1;
+  let mid = Math.floor((max + min) / 2);
   while (min <= max) {
-    const mid = Math.floor((max + min) / 2);
     if (array[mid] === value) return mid;
-    if (array[mid] > value) max = mid;
-    if (array[mid] < value) min = mid;
-  } return -123;
+    if (array[mid] > value) max = mid - 1;
+    if (array[mid] < value) min = mid + 1;
+    mid = Math.floor((max + min) / 2);
+  } return -1;
 }
 
 module.exports = findIndex;
