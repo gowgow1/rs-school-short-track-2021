@@ -25,14 +25,12 @@ class Queue {
     this.copy.value = element;
     this.copy.next = new ListNode();
     this.copy = this.copy.next;
-    this.length += 1;
   }
 
   dequeue() {
     const it = this.noda.value;
     this.noda.value = this.noda.next.value;
     this.noda.next = this.noda.next.next;
-    this.length -= 1;
     return it;
   }
 }
