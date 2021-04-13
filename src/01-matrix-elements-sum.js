@@ -21,11 +21,10 @@ Index(item) - arr(row).length != 0?
 add item to sum
 */
 function getMatrixElementsSum(matrix) {
-  const result = matrix.map((row, rowind, arr) => row.reduce((acum, curr, i) => {
+  return matrix.reduce((s, row, rowind, arr) => s + row.reduce((acum, curr, i) => {
     if (rowind > 0) { return arr[rowind - 1][i] === 0 ? acum : acum + curr; }
     return acum + curr;
-  }, 0));
-  return result.reduce((acum, curr) => acum + curr);
+  }, 0), 0);
 }
 
 module.exports = getMatrixElementsSum;
